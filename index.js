@@ -30,6 +30,44 @@ app.post('/create-pdf', (req, res) => {
 });
 
 
+// app.post('/create-pdf', (req, res) => {
+//     return cors(req, res, () => {
+//         pdf.create(pdfTemplate(req.body), {}).toFile('Resume.pdf', async (err, res) => {
+//            if (err) {
+//             res.send(Promise.reject());
+//             console.log(err);
+//         }
+
+//            return console.log(res);
+//         });
+
+//         res.status(200).type('application/json').send({'response': 'Success'})
+
+//         // res.send(Promise.resolve());
+//         // console.log('Success');
+//     });
+// });
+
+
+// app.post('/create-pdf', (req, res) => {
+//     return cors(req, res, () => {
+//         pdf.create(pdfTemplate(req.body), {}).toFile('Resume.pdf', async (err, res) => {
+//             if (err) {
+//                 res.send(Promise.reject());
+//                 console.log(err);
+//             }
+
+//             res.send(Promise.resolve());
+//             console.log('Success');
+//         })
+//     });
+// });
+
+
+
+
+
+
 // Get - Send generated pdf to the client
 app.get('/fetch-pdf', (req, res) => {
     res.sendFile(`${__dirname}/Resume.pdf`);
@@ -53,8 +91,8 @@ app.get('/fetch-pdf', (req, res) => {
 
 
 // Serve static assets if in production
-if(process.env.NODE_ENV === 'production'){
-    
+if (process.env.NODE_ENV === 'production') {
+
 
     const path = require('path')
     //set static folder
