@@ -29,6 +29,11 @@ app.use(bodyParser.json());
 //     });
 // });
 
+// Get - Send generated pdf to the client
+// app.get('/fetch-pdf', (req, res) => {
+//     res.sendFile(`${__dirname}/Resume.pdf`);
+// });
+
 
 app.post('/create-pdf', (req, res) => {
     pdf.create(pdfTemplate(req.body), { format: 'Letter' }).toStream(function (err, stream) {
@@ -43,48 +48,12 @@ app.post('/create-pdf', (req, res) => {
 });
 
 
-// app.post('/create-pdf', (req, res) => {
-//     return cors(req, res, () => {
-//         pdf.create(pdfTemplate(req.body), {}).toFile('Resume.pdf', async (err, res) => {
-//            if (err) {
-//             res.send(Promise.reject());
-//             console.log(err);
-//         }
-
-//            return console.log(res);
-//         });
-
-//         res.status(200).type('application/json').send({'response': 'Success'})
-
-//         // res.send(Promise.resolve());
-//         // console.log('Success');
-//     });
-// });
-
-
-// app.post('/create-pdf', (req, res) => {
-//     return cors(req, res, () => {
-//         pdf.create(pdfTemplate(req.body), {}).toFile('Resume.pdf', async (err, res) => {
-//             if (err) {
-//                 res.send(Promise.reject());
-//                 console.log(err);
-//             }
-
-//             res.send(Promise.resolve());
-//             console.log('Success');
-//         })
-//     });
-// });
 
 
 
 
 
 
-// Get - Send generated pdf to the client
-app.get('/fetch-pdf', (req, res) => {
-    res.sendFile(`${__dirname}/Resume.pdf`);
-});
 
 
 
@@ -135,3 +104,37 @@ app.listen(port, () => console.log(`Server started on port ${port}`));
 // "client-install": "npm install --prefix client",
 // "client": "npm run build --prefix client",
 // "dev": "concurrently \"npm run server\" \"npm run client\""
+
+
+// app.post('/create-pdf', (req, res) => {
+//     return cors(req, res, () => {
+//         pdf.create(pdfTemplate(req.body), {}).toFile('Resume.pdf', async (err, res) => {
+//             if (err) {
+//                 res.send(Promise.reject());
+//                 console.log(err);
+//             }
+
+//             res.send(Promise.resolve());
+//             console.log('Success');
+//         })
+//     });
+// });
+
+
+// app.post('/create-pdf', (req, res) => {
+//     return cors(req, res, () => {
+//         pdf.create(pdfTemplate(req.body), {}).toFile('Resume.pdf', async (err, res) => {
+//            if (err) {
+//             res.send(Promise.reject());
+//             console.log(err);
+//         }
+
+//            return console.log(res);
+//         });
+
+//         res.status(200).type('application/json').send({'response': 'Success'})
+
+//         // res.send(Promise.resolve());
+//         // console.log('Success');
+//     });
+// });

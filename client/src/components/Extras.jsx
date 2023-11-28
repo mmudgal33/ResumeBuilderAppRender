@@ -67,10 +67,22 @@ class Extras extends Component {
 
 
         // axios.post('http://localhost:8000/create-pdf', values)
+        // axios.post(`${URL}/create-pdf`, values)
+
+        //     // .then(() => axios.get('http://localhost:8000/fetch-pdf', { responseType: 'blob' }))
+        //     .then(() => axios.get(`${URL}/fetch-pdf`, { responseType: 'blob' }))
+        //     .then((res) => {
+        //         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
+
+        //         saveAs(pdfBlob, 'Resume.pdf');
+        //     });
+
+        // e.target.reset();
+
         axios.post(`${URL}/create-pdf`, values)
 
             // .then(() => axios.get('http://localhost:8000/fetch-pdf', { responseType: 'blob' }))
-            .then(() => axios.get(`${URL}/fetch-pdf`, { responseType: 'blob' }))
+            // .then(() => axios.get(`${URL}/fetch-pdf`, { responseType: 'blob' }))
             .then((res) => {
                 const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
 
