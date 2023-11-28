@@ -17,15 +17,28 @@ app.use(bodyParser.json());
 
 // POST Route - PDF generation and fetching of the data
 
+// app.post('/create-pdf', (req, res) => {
+//     pdf.create(pdfTemplate(req.body), {}).toFile('Resume.pdf', (err) => {
+//         if (err) {
+//             res.send(Promise.reject());
+//             console.log(err);
+//         }
+
+//         res.send(Promise.resolve());
+//         console.log('Success');
+//     });
+// });
+
+
 app.post('/create-pdf', (req, res) => {
-    pdf.create(pdfTemplate(req.body), {}).toFile('Resume.pdf', (err) => {
+    pdf.create(pdfTemplate(req.body), { format: 'Letter' }).toStream(function (err, stream) {
         if (err) {
-            res.send(Promise.reject());
-            console.log(err);
+            res.json({
+                message: 'Sorry, we were unable to generate pdf',
+            });
         }
 
-        res.send(Promise.resolve());
-        console.log('Success');
+        stream.pipe(res); // your response
     });
 });
 

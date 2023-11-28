@@ -9,7 +9,7 @@
 //   export const config = process.env.NODE_ENV === 'development' ? development : production;
 
 const production = {
-  url: 'https://mern-task-app-foodorderingfrontend1.onrender.com',
+  url: 'https://resumebuilderapprender.onrender.com',
   api: 'https://resumebuilderapprender-api.onrender.com'
   //api: ''
 };
