@@ -6,7 +6,7 @@ import Project from './Project';
 import Education from './Education';
 import Success from './Success';
 import Extras from './Extras';
-//import Resume from './Resume';
+import Resume from './Resume';
 import App from '../App';
 
 class UserForm extends Component {
@@ -361,6 +361,10 @@ class UserForm extends Component {
                                 submitted={this.submitted}
                                 handleChange={this.handleChange}
                                 nextResume={this.nextResume}
+                            />
+
+                            <Resume
+                                values ={this.state}
                             />
                         </div>
                         <br />

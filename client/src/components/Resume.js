@@ -1,6 +1,8 @@
 import { Component } from "react";
 import "../App.css";   // file in outer folder
-//import "./Resume.css";
+import "./Resume.css";
+
+
 
 
 
