@@ -67,10 +67,25 @@ class Extras extends Component {
 
 
         // axios.post('http://localhost:8000/create-pdf', values)
+        axios.post(`${URL}/create-pdf`, values)
+
+            // .then(() => axios.get('http://localhost:8000/fetch-pdf', { responseType: 'blob' }))
+            .then(() => axios.get(`${URL}/fetch-pdf`, { responseType: 'blob' }))
+            .then((res) => {
+                const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
+
+                saveAs(pdfBlob, 'Resume.pdf');
+            });
+
+        e.target.reset();
+
+
+
+
         // axios.post(`${URL}/create-pdf`, values)
 
         //     // .then(() => axios.get('http://localhost:8000/fetch-pdf', { responseType: 'blob' }))
-        //     .then(() => axios.get(`${URL}/fetch-pdf`, { responseType: 'blob' }))
+        //     // .then(() => axios.get(`${URL}/fetch-pdf`, { responseType: 'blob' }))
         //     .then((res) => {
         //         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
 
@@ -79,19 +94,24 @@ class Extras extends Component {
 
         // e.target.reset();
 
-        axios.post(`${URL}/create-pdf`, values)
 
-            // .then(() => axios.get('http://localhost:8000/fetch-pdf', { responseType: 'blob' }))
-            // .then(() => axios.get(`${URL}/fetch-pdf`, { responseType: 'blob' }))
-            .then((res) => {
-                const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
 
-                saveAs(pdfBlob, 'Resume.pdf');
-            });
-
-        e.target.reset();
+        // genratePdf({ commit }, data) {
+            // axios.post(`${URLS}/create-pdf`, values,{ responseType:'arraybuffer' }).then((response) => {
+            //   let blob = new Blob([response.data],{type:'application/pdf'})
+            //   var link=document.createElement('a');
+            //   link.href=URL.createObjectURL(blob);
+            //   link.download="Report_"+new Date()+".pdf";
+            //   link.click();
         
-    }
+        
+            // }, (err) => {
+            //   console.log(err)
+            // })
+
+            // e.target.reset();
+         }
+    
 
     
 

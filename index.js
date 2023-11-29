@@ -17,35 +17,36 @@ app.use(bodyParser.json());
 
 // POST Route - PDF generation and fetching of the data
 
-// app.post('/create-pdf', (req, res) => {
-//     pdf.create(pdfTemplate(req.body), {}).toFile('Resume.pdf', (err) => {
-//         if (err) {
-//             res.send(Promise.reject());
-//             console.log(err);
-//         }
-
-//         res.send(Promise.resolve());
-//         console.log('Success');
-//     });
-// });
-
-// Get - Send generated pdf to the client
-// app.get('/fetch-pdf', (req, res) => {
-//     res.sendFile(`${__dirname}/Resume.pdf`);
-// });
-
-
 app.post('/create-pdf', (req, res) => {
-    pdf.create(pdfTemplate(req.body), { format: 'Letter' }).toStream(function (err, stream) {
+    pdf.create(pdfTemplate(req.body), {})
+    .toFile('Resume.pdf', (err) => {
         if (err) {
-            res.json({
-                message: 'Sorry, we were unable to generate pdf',
-            });
+            res.send(Promise.reject());
+            console.log(err);
         }
 
-        stream.pipe(res); // your response
+        res.send(Promise.resolve());
+        console.log('Success');
     });
 });
+
+// Get - Send generated pdf to the client
+app.get('/fetch-pdf', (req, res) => {
+    res.sendFile(`${__dirname}/Resume.pdf`);
+});
+
+
+// app.post('/create-pdf', (req, res) => {
+//     pdf.create(pdfTemplate(req.body), { format: 'Letter' }).toStream(function (err, stream) {
+//         if (err) {
+//             res.json({
+//                 message: 'Sorry, we were unable to generate pdf',
+//             });
+//         }
+
+//         stream.pipe(res); // your response
+//     });
+// });
 
 
 
