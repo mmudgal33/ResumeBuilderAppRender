@@ -8,7 +8,7 @@ import Success from './Success';
 import Extras from './Extras';
 // import Resume from './Resume';
 
-// import ResumeT from './ResumeT';
+import ResumeT from './ResumeT';
 
 import App from '../App';
 
@@ -318,9 +318,9 @@ class UserForm extends Component {
                                 values={this.state}
                             /> */}
 
-                            {/* <ResumeT
+                            <ResumeT
                                 values={this.state}
-                            /> */}
+                            />
 
                             {/* <ResumejsPDF
                                 values={this.state}
