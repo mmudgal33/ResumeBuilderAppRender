@@ -118,9 +118,8 @@ const ResumeT = (props) => {
             {/* <button className="button" onClick={handleGeneratePdf}>
                 Generate PDF
             </button> */}
-            <button className="button" onClick={downloadResume}>
-                Generate PDF
-            </button>
+            {/* <button className="button" onClick={downloadResume}> Generate PDF </button> */}
+            <button type="button" className="btn btn-info" onClick={downloadResume}><i className="fas fa-angle-left mr-1"></i> Generate PDF </button>
             {/* <div ref={reportTemplateRef}>  */}
             <div id ='download' > 
             
