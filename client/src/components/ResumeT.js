@@ -83,8 +83,8 @@ const ResumeT = (props) => {
                 Generate PDF
             </button> */}
            
-            <button type="submit" className="btn btn-info" >Generate PDF<i className="fas fa-submit ml-1"></i></button>
-            {/* <button className="button" onClick={downloadResume}> Generate PDF </button> */}
+            
+            <button className="button" onClick={downloadResume}> Generate PDF </button>
             {/* <button className="btn btn-info" onClick={downloadResume}> Generate PDF </button> */}
             {/* <button type="button" className="btn btn-info" onClick={downloadResume}> Generate PDF </button> */}
             {/* <div ref={reportTemplateRef}>  */}
