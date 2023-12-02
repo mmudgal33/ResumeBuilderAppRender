@@ -16,9 +16,10 @@ export default class Success extends Component {
 
     
     return (
+      <div>
 
 
-      // <form onSubmit={this.continue}>
+      {/* <form onSubmit={this.continue}> */}
       <form onSubmit={this.nextResume}>
 
         <div className="container text-center">
@@ -39,6 +40,13 @@ export default class Success extends Component {
         </div>
         <br />
       </form>
+
+
+      <ResumeT values={this.state}/>
+      </div>
+
     )
+
+       
   }
 }

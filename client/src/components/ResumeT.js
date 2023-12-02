@@ -11,7 +11,7 @@ import { useRef } from 'react';
 const ResumeT = (props) => {
     // function ResumeTutorial(props) {
     const { values } = props;
-    const reportTemplateRef = useRef(null);
+    // const reportTemplateRef = useRef(null);
 
 
 
@@ -82,7 +82,7 @@ const ResumeT = (props) => {
             {/* <button className="button" onClick={handleGeneratePdf}>
                 Generate PDF
             </button> */}
-            <form onSubmit={downloadResume}>
+           
             <button type="submit" className="btn btn-info" >Generate PDF<i className="fas fa-submit ml-1"></i></button>
             {/* <button className="button" onClick={downloadResume}> Generate PDF </button> */}
             {/* <button className="btn btn-info" onClick={downloadResume}> Generate PDF </button> */}
@@ -195,12 +195,15 @@ const ResumeT = (props) => {
                     <button type="button" className="btn btn-info" onClick={downloadResume}> Generate PDF </button> */}
 
                 </div>
-                {/* <button className="button" onClick={downloadResume}> Generate PDF </button> */}
                 
-                </form>
             </div>
 
 
+        
+    );
+}
+
+export default ResumeT;
 
 
 
@@ -227,8 +230,7 @@ const ResumeT = (props) => {
 
 
 
-
-        // <div>
+ // <div>
         //     {/* <button className="button" onClick={handleGeneratePdf}>
         //         Generate PDF
         //     </button> */}
@@ -344,15 +346,7 @@ const ResumeT = (props) => {
 
 
 
-       
 
-
-
-        
-    );
-}
-
-export default ResumeT;
 
 
 
