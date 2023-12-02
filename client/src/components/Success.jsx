@@ -1,10 +1,10 @@
 import ResumeT from './ResumeT';
 import React, { Component } from 'react'
 
-
+// component to show success when data taken from form cycle
 export default class Success extends Component {
 
-
+  // move to create next resume
   nextResume = e => {
     e.preventDefault();
     this.props.nextResume();

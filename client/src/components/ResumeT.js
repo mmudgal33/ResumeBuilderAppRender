@@ -6,52 +6,14 @@ import "../App.css";
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import { useRef } from 'react';
-//import ReportTemplate from './ReportTemplate';
 
+
+// resume template to import data, show and download
 const ResumeT = (props) => {
-    // function ResumeTutorial(props) {
+    
     const { values } = props;
-    // const reportTemplateRef = useRef(null);
 
-
-
-
-    const styles = {
-        page: {
-            marginLeft: '5rem',
-            marginRight: '5rem',
-            'page-break-after': 'always',
-        },
-
-        columnLayout: {
-            display: 'flex',
-            justifyContent: 'space-between',
-            margin: '3rem 0 5rem 0',
-            gap: '2rem',
-        },
-
-        column: {
-            display: 'flex',
-            flexDirection: 'column',
-        },
-
-        spacer2: {
-            height: '2rem',
-        },
-
-        fullWidth: {
-            width: '100%',
-        },
-
-        marginb0: {
-            marginBottom: 0,
-        },
-    };
-
-
-
-
-
+    // download resume handle
     const downloadResume = async () => {
         const input = document.getElementById('download');
         html2canvas(input)
@@ -75,19 +37,16 @@ const ResumeT = (props) => {
 
 
     
-
+    // resume template
     return (
 
          <div>
-            {/* <button className="button" onClick={downloadResume}>
-                Generate PDF
-            </button> */}
+            
            
             
-            {/* <button className="button" onClick={downloadResume}> Generate PDF </button> */}
-            {/* <button className="btn btn-info" onClick={downloadResume}> Generate PDF </button> */}
+            
             <button type="button" className="btn btn-info" onClick={downloadResume}> Generate PDF </button>
-            {/* <div ref={reportTemplateRef}>  */}
+            
             <div id ='download' > 
             
 
@@ -153,15 +112,6 @@ const ResumeT = (props) => {
 
 
 
-
-
-
-
-
-
-
-
-
                         <div class="col-lg-10 mx-auto bg-light">
                             <h3><b>Education</b></h3>
                         </div>
@@ -190,9 +140,7 @@ const ResumeT = (props) => {
 
                     </div>
 
-                    {/* <button className="button" onClick={downloadResume}> Generate PDF </button>
-                    <button className="btn btn-info" onClick={downloadResume}> Generate PDF </button>
-                    <button type="button" className="btn btn-info" onClick={downloadResume}> Generate PDF </button> */}
+                    
 
                 </div>
                 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+// component of form Education data
 class Education extends Component {
 
     back = e => {

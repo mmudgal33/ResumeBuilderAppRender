@@ -12,6 +12,9 @@ import ResumeT from './ResumeT';
 
 import App from '../App';
 
+// main component for moving other components
+// state and components declaration here
+
 class UserForm extends Component {
 
     state = {
@@ -162,6 +165,9 @@ class UserForm extends Component {
         });
     };
 
+
+    // check if submitted else error shows to give information
+
     submitted = () => {
         const { status } = this.state;
         this.setState({
@@ -169,7 +175,7 @@ class UserForm extends Component {
         });
     }
 
-
+    // for more resumes
     nextResume = () => {
         const { step } = this.state;
         this.setState({
@@ -180,11 +186,11 @@ class UserForm extends Component {
 
 
 
-
+    // handle state values
     handleChange = ({ target: { value, name } }) => this.setState({ [name]: value })
 
 
-    
+    // all components called one by one here
     render() {
         const { step } = this.state;
        

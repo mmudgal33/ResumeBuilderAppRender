@@ -6,7 +6,8 @@ import { saveAs } from 'file-saver';
 import { config } from '../Constants';
 const URL = config.api;
 
-
+// component of form Extras data
+// backend call to auto download resume. works localhost only
 class Extras extends Component {
 
     back = e => {
@@ -19,6 +20,9 @@ class Extras extends Component {
         this.props.nextStep();
     }
 
+    // on clicking show resume it send request to localhost.
+    // change url of api in constants to see effects
+    // create-pdf, fetch-api also present in it
     formSubmit = (e) => {
         e.preventDefault();
         this.props.submitted();
