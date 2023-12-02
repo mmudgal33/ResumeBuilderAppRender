@@ -8,7 +8,7 @@ import Success from './Success';
 import Extras from './Extras';
 // import Resume from './Resume';
 
-import ResumeTutorial from './ResumeT';
+import ResumeT from './ResumeT';
 
 import App from '../App';
 
