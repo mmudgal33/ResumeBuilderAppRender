@@ -28,44 +28,6 @@ class Extras extends Component {
 
 
 
-
-        /*const data = {
-            name: this.state.name,
-            email: this.state.email,
-            phone: this.state.phone,
-            linkedin: this.state.linkedin,
-            github: this.state.github,
-            skills: this.state.skills,
-            exp1_org: this.state.exp1_org,
-            exp1_pos: this.state.exp1_pos,
-            exp1_desc: this.state.exp1_desc,
-
-            exp2_org: this.state.exp1_org,
-            exp2_pos: this.state.exp1_pos,
-            exp2_desc: this.state.exp1_desc
-        }*/
-
-
-
-
-        // const data = this.props.values;
-        // const data = this.props;
-
-
-        // axios.post('/create-pdf', data)
-        //     .then(() => axios.get('fetch-pdf', { responseType: 'blob' }))
-        //     .then((res) => {
-        //         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
-
-        //         saveAs(pdfBlob, 'Resume.pdf');
-        //     });
-
-        // e.target.reset();
-
-        //let link = 'http://localhost:8000';
-
-
-
         // axios.post('http://localhost:8000/create-pdf', values)
         axios.post(`${URL}/create-pdf`, values)
 
@@ -79,43 +41,9 @@ class Extras extends Component {
 
         e.target.reset();
 
-
-
-
-        // axios.post(`${URL}/create-pdf`, values)
-
-        //     // .then(() => axios.get('http://localhost:8000/fetch-pdf', { responseType: 'blob' }))
-        //     // .then(() => axios.get(`${URL}/fetch-pdf`, { responseType: 'blob' }))
-        //     .then((res) => {
-        //         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
-
-        //         saveAs(pdfBlob, 'Resume.pdf');
-        //     });
-
-        // e.target.reset();
-
-
-
-        // genratePdf({ commit }, data) {
-            // axios.post(`${URLS}/create-pdf`, values,{ responseType:'arraybuffer' }).then((response) => {
-            //   let blob = new Blob([response.data],{type:'application/pdf'})
-            //   var link=document.createElement('a');
-            //   link.href=URL.createObjectURL(blob);
-            //   link.download="Report_"+new Date()+".pdf";
-            //   link.click();
         
-        
-            // }, (err) => {
-            //   console.log(err)
-            // })
-
-            // e.target.reset();
          }
     
-
-    
-
-   
 
 
     render() {
@@ -185,3 +113,92 @@ class Extras extends Component {
         }
 
         export default Extras;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*const data = {
+            name: this.state.name,
+            email: this.state.email,
+            phone: this.state.phone,
+            linkedin: this.state.linkedin,
+            github: this.state.github,
+            skills: this.state.skills,
+            exp1_org: this.state.exp1_org,
+            exp1_pos: this.state.exp1_pos,
+            exp1_desc: this.state.exp1_desc,
+
+            exp2_org: this.state.exp1_org,
+            exp2_pos: this.state.exp1_pos,
+            exp2_desc: this.state.exp1_desc
+        }*/
+
+
+
+
+        // const data = this.props.values;
+        // const data = this.props;
+
+
+        // axios.post('/create-pdf', data)
+        //     .then(() => axios.get('fetch-pdf', { responseType: 'blob' }))
+        //     .then((res) => {
+        //         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
+
+        //         saveAs(pdfBlob, 'Resume.pdf');
+        //     });
+
+        // e.target.reset();
+
+        //let link = 'http://localhost:8000';
+
+
+
+
+
+
+
+
+        // axios.post(`${URL}/create-pdf`, values)
+
+        //     // .then(() => axios.get('http://localhost:8000/fetch-pdf', { responseType: 'blob' }))
+        //     // .then(() => axios.get(`${URL}/fetch-pdf`, { responseType: 'blob' }))
+        //     .then((res) => {
+        //         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
+
+        //         saveAs(pdfBlob, 'Resume.pdf');
+        //     });
+
+        // e.target.reset();
+
+
+
+        // genratePdf({ commit }, data) {
+            // axios.post(`${URLS}/create-pdf`, values,{ responseType:'arraybuffer' }).then((response) => {
+            //   let blob = new Blob([response.data],{type:'application/pdf'})
+            //   var link=document.createElement('a');
+            //   link.href=URL.createObjectURL(blob);
+            //   link.download="Report_"+new Date()+".pdf";
+            //   link.click();
+        
+        
+            // }, (err) => {
+            //   console.log(err)
+            // })
+
+            // e.target.reset();
